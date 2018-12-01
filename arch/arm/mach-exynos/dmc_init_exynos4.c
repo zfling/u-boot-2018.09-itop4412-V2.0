@@ -26,7 +26,12 @@
 #include <config.h>
 #include <asm/arch/dmc.h>
 #include "common_setup.h"
-#include "exynos4_setup.h"
+
+#ifdef CONFIG_ITOP4412
+# include "itop4412_setup.h"
+#else
+# include "exynos4_setup.h"
+#endif
 
 struct mem_timings mem = {
 	.direct_cmd_msr = {
@@ -48,6 +53,8 @@ struct mem_timings mem = {
 	.dll_resync = FORCE_DLL_RESYNC,
 	.dll_on = DLL_CONTROL_ON,
 };
+
+
 static void phy_control_reset(int ctrl_no, struct exynos4_dmc *dmc)
 {
 	if (ctrl_no) {
@@ -62,6 +69,7 @@ static void phy_control_reset(int ctrl_no, struct exynos4_dmc *dmc)
 		       &dmc->phycontrol0);
 	}
 }
+
 
 static void dmc_config_mrs(struct exynos4_dmc *dmc, int chip)
 {
@@ -175,7 +183,7 @@ void mem_ctrl_init(int reset)
 	 * 0: full_sync
 	 */
 	writel(1, ASYNC_CONFIG);
-#ifdef CONFIG_ORIGEN
+#if (defined CONFIG_ORIGEN) || (defined CONFIG_ITOP4412)
 	/* Interleave: 2Bit, Interleave_bit1: 0x15, Interleave_bit0: 0x7 */
 	writel(APB_SFR_INTERLEAVE_CONF_VAL, EXYNOS4_MIU_BASE +
 		APB_SFR_INTERLEAVE_CONF_OFFSET);
