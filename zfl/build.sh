@@ -4,7 +4,7 @@ cd ../
 
 if [ ! -f .config ]
 then
-	make itop4412_defconfig
+	make itop4412_zfl_defconfig
 fi
 
 make
