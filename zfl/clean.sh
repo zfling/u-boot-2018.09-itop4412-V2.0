@@ -24,6 +24,4 @@ if [ -f u-boot.bin ] ; then
 	make distclean
 fi
 
-cd  ./zfl/
-
 echo "clean success !!!"

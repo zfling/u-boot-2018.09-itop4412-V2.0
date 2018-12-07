@@ -15,6 +15,7 @@ echo "copy u-boot.bin done."
 cd spl/
 if [ ! -f itop4412-spl.bin ] ; then
 	echo "notice: not found itop4412-spl.bin !"
+	cd ../zfl/
 	exit 0
 else
 	echo "copying itop4412-spl.bin..."
