@@ -351,12 +351,12 @@ void system_clock_init(void)
 	 * DOUTmmc3  = MOUTmmc3 / (MMC2_RATIO + 1)     = 100 MHz (7)
 	 * sclk_mmc3 = DOUTmmc3 / (MMC2_PRE_RATIO + 1) = 50 MHz (1)
 	 * DOUTmmc2  = MOUTmmc2 / (MMC3_RATIO + 1)     = 100 MHz (7)
-	 * sclk_mmc2 = DOUTmmc2 / (MMC3_PRE_RATIO + 1) = 50 MHz (1)
+	 * sclk_mmc2 = DOUTmmc2 / (MMC3_PRE_RATIO + 1) = 20 MHz (4)
 	*/
 	/* CLK_DIV_FSYS2 */
 	clr = MMC2_RATIO(15) | MMC2_PRE_RATIO(255) | MMC3_RATIO(15) |
 	      MMC3_PRE_RATIO(255);
-	set = MMC2_RATIO(7) | MMC2_PRE_RATIO(1) | MMC3_RATIO(7) |
+	set = MMC2_RATIO(7) | MMC2_PRE_RATIO(4) | MMC3_RATIO(7) |
 	      MMC3_PRE_RATIO(1);
 
 	clrsetbits_le32(&clk->div_fsys2, clr, set);
