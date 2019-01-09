@@ -2,11 +2,9 @@
 
 cd ../
 
-if [ ! -f .config ]
-then
-	make itop4412_zfl_defconfig
-	echo "make itop4412_zfl_defconfig !"
-fi
+
+make itop4412_zfl_defconfig
+echo "make itop4412_zfl_defconfig !"
 
 make
 
