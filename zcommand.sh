@@ -32,7 +32,7 @@ fi
 
 if [ $1 -eq 3 ] ; then
 	echo "--- 烧写bin到SD卡 ---> "
-	./mkuboot.sh
+	sudo ./mkuboot.sh
 	exit 0
 fi
 
