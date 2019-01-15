@@ -1,3 +1,4 @@
 cd /cygdriver/e
 rsync -azvP ../ --password-file=password zfling@192.168.3.58::zfl_uboot_iTop4412_V2
 rsync -azvP --password-file=password zfling@192.168.3.58::zfl_uboot_iTop4412_V2/include/generated/ ../include/generated/
+rsync -azvP --password-file=password zfling@192.168.3.58::zfl_uboot_iTop4412_V2/*.map ./

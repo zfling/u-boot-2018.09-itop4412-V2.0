@@ -1910,3 +1910,10 @@ drivers/gpio/s5p_gpio.c
 drivers/serial/serial.c
 drivers/serial/serial_s5p.c
 fs/fs_internal.c
+
+cmd/led.c
+cmd/legacy_led.c
+drivers/led/led-uclass.c
+drivers/led/led_gpio.c
+cmd/led_test.c
+scripts/config_whitelist.txt

@@ -114,4 +114,13 @@
 #define BL2_START_OFFSET	((CONFIG_ENV_OFFSET + CONFIG_ENV_SIZE)/512)
 #define BL2_SIZE_BLOC_COUNT	(COPY_BL2_SIZE/512)
 
+/* led */
+#if 0
+#define CONFIG_CMD_LED
+#define CONFIG_LED_GPIO
+#endif
+
+/* DEBUG for zfl */
+#define CONFIG_zfl_DEBUG_CMD_LED
+
 #endif	/* __CONFIG_H */
