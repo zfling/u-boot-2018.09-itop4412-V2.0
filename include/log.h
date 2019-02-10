@@ -100,6 +100,8 @@ int _log(enum log_category_t cat, enum log_level_t level, const char *file,
 		      __func__, \
 		      pr_fmt(_fmt), ##_args); \
 	})
+/* zfl modify on 2019-01-16 */
+#define DEBUG
 
 #ifdef DEBUG
 #define _DEBUG	1

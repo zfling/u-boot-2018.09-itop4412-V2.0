@@ -7,7 +7,7 @@
 #include <common.h>
 #include <command.h>
 #include <dm.h>
-#include <led.h>
+#include <led_test.h>
 #include <dm/uclass-internal.h>
 
 static const char *const state_label_test[] = {

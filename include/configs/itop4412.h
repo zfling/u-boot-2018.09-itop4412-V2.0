@@ -122,5 +122,9 @@
 
 /* DEBUG for zfl */
 #define CONFIG_zfl_DEBUG_CMD_LED
+#define CONFIG_zfl_DEBUG_UCLASS_LED
+
+/* debug */
+#define CONFIG_PRINTF
 
 #endif	/* __CONFIG_H */

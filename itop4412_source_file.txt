@@ -939,6 +939,7 @@ include/time.h
 include/sh_tmu.h
 include/fis.h
 include/led.h
+include/led_test.h
 include/ns87308.h
 include/ide.h
 include/usbdevice.h
@@ -1916,4 +1917,5 @@ cmd/legacy_led.c
 drivers/led/led-uclass.c
 drivers/led/led_gpio.c
 cmd/led_test.c
+drivers/led_test/led_test-uclass.c
 scripts/config_whitelist.txt
