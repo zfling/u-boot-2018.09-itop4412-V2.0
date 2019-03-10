@@ -244,7 +244,7 @@ ifeq ($(HOSTARCH),$(ARCH))
 CROSS_COMPILE ?=
 endif
 
-CROSS_COMPILE := arm-linux-gnueabi-
+CROSS_COMPILE := /home/zfl/tools/gcc-linaro-7.3.1-2018.05-x86_64_arm-linux-gnueabi/bin/arm-linux-gnueabi-
 
 KCONFIG_CONFIG	?= .config
 export KCONFIG_CONFIG
